@@ -1,0 +1,24 @@
+syntax = "proto3";
+package  com.src.todo;
+
+service Todo {
+    rpc create (TodoItem) returns (TodoItem);
+    rpc getTodo (Id) returns (TodoItem);
+    rpc findAll (voidnull) returns (TodoItems);
+    rpc todoStream (voidnull) returns (stream TodoItem);
+}
+
+message voidnull {}
+
+message Id {
+    int32 id = 1;
+}
+
+message TodoItem {
+    int32 id = 1;
+    string text = 2;
+}
+
+message TodoItems {
+    repeated TodoItem items = 1;
+}
