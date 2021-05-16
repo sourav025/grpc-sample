@@ -19,5 +19,5 @@ npm run server
 ## Client
 This client is communicated with the server to create todo. 
 ```
-node client.js
+node client.js "YOUR TODO ITEM DESCRIPTION"
 ```
